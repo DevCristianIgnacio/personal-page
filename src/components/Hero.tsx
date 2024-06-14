@@ -1,15 +1,15 @@
+"use client";
+import { Bug, Send } from "lucide-react";
 import Link from "next/link";
-import React from "react";
-import { Send, Bug } from "lucide-react";
+import { BsFillPinMapFill } from "react-icons/bs";
+import { IoIosAlbums } from "react-icons/io";
+import { MdAlbum } from "react-icons/md";
 
-import {
-  RiBriefcase4Fill,
-  RiTeamFill,
-  RiTodoFill,
-  RiArrowDownSLine,
-} from "react-icons/ri";
-import { Button } from "./ui/button";
+import { RiArrowDownSLine } from "react-icons/ri";
+import Badge from "./Badge";
+import DevImg from "./DevImg";
 import Socials from "./Socials";
+import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
@@ -46,7 +46,37 @@ const Hero = () => {
             />
           </div>
           {/** Image */}
-          <div className="hidden xl:flex relative">image</div>
+          <div className="hidden xl:flex relative">
+            {/** Badge 1 */}
+            <Badge
+              icon={<MdAlbum />}
+              containerStyles="absolute top-[24%] -left-[5rem]"
+              endCountNum={5}
+              endCountText="+"
+              badgeText="Discos Oro y Platino"
+            />
+            {/** Badge 2 */}
+            <Badge
+              icon={<BsFillPinMapFill />}
+              containerStyles="absolute top-[80%] -left-[1rem]"
+              endCountNum={12}
+              endCountText="+"
+              badgeText="Paises visitados "
+            />
+            {/** Badge 3 */}
+            <Badge
+              icon={<IoIosAlbums />}
+              containerStyles="absolute top-[55%] -right-8"
+              endCountNum={7}
+              endCountText=""
+              badgeText="Album de Estudio grabados"
+            />
+            <div className="bg-hero_shape2_light dark:bg-hero_shape2_dark w-[500px] h-[500px] bg-no-repeat absolute -top-1 -right-2"></div>
+            <DevImg
+              containerStyles="bg-hero_shape w-[510px] h-[462px] bg-no-repeat relative bg-bottom"
+              imgSrc="/hero/hero_placeholder.png"
+            />
+          </div>
         </div>
         <div className="hidden md:flex absolute left-2/4 bottom-44 xl:bottom-12 animate-bounce">
           <RiArrowDownSLine className="text-3xl text-primary" />

@@ -1,13 +1,13 @@
 "use client";
 import Link from "next/link";
-import path from "path";
-import React, { FC } from "react";
+import { FC } from "react";
 
 import {
-  RiYoutubeFill,
-  RiLinkedinFill,
   RiGithubFill,
   RiInstagramFill,
+  RiLinkedinFill,
+  RiSoundcloudFill,
+  RiYoutubeFill,
 } from "react-icons/ri";
 
 const icons = [
@@ -27,6 +27,10 @@ const icons = [
   {
     path: "/",
     name: <RiInstagramFill size={24} />,
+  },
+  {
+    path: "/",
+    name: <RiSoundcloudFill size={24} />,
   },
 ];
 
