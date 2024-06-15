@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
+import { ThemeProvider } from "next-themes";
+
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import { ThemeProvider } from "next-themes";
 
-const inter = Inter({ subsets: ["latin"] });
+const monse = Montserrat({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Cristian Dev ",
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.className}`}>
+      <body className={`${monse.className}`}>
         <ThemeProvider attribute="class" defaultTheme="light">
           <Header />
           {children}

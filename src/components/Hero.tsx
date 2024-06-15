@@ -1,19 +1,23 @@
 "use client";
-import { Bug, Send } from "lucide-react";
+// Librerías externas
 import Link from "next/link";
+import { Bug, Send } from "lucide-react";
 import { BsFillPinMapFill } from "react-icons/bs";
 import { IoIosAlbums } from "react-icons/io";
 import { MdAlbum } from "react-icons/md";
-
 import { RiArrowDownSLine } from "react-icons/ri";
+
+// Componentes locales
 import Badge from "./Badge";
 import DevImg from "./DevImg";
 import Socials from "./Socials";
+
+// Componentes UI
 import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <section className="py-12 xl:py-24 h-[84vh] xl:pt-28 bg-hero bg-no-repeat bg-cover bg-bottom dark:bg-none">
+    <section className="pb-12 min-h-min xl:pt-10 bg-hero bg-no-repeat  bg-bottom bg-cover dark:bg-none">
       <div className="container mx-auto">
         <div className="flex justify-between gap-x-8">
           {/* Text */}
